@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 
 public class Program
 {
@@ -15,8 +16,8 @@ public class Program
         IsDivisibleBy5(40);
         CheckEvenOrOdd(4);
         CheckEvenOrOdd(5);
-        CheckVowelOrConsonant(a);
-        CheckVowelOrConsonant(y);
+        CheckVowelOrConsonant('A');
+        CheckVowelOrConsonant('y');
         DisplayDayOfWeek(0); // This should output: "Sunday"
         DisplayDayOfWeek(3); // This should output: "Wednesday"
 
@@ -24,37 +25,40 @@ public class Program
     // Define your functions below:
     public static void FahrenheitToCelsius(double fahrenheit)
     {
-        double celsiusDegree = (fahrenheit - 32) * 5/9; 
+        double celsiusDegree = (fahrenheit - 32) * 5 / 9;
         Console.WriteLine($"{fahrenheit} degrees Fahrenheit is {celsiusDegree} degrees Celsius.");
     }
 
     public static void CheckForPositiveNegativeZero(int number)
     {
-        if (number < 0) {
+        if (number < 0)
+        {
             Console.WriteLine("Your number is negative");
         }
-        if (number == 0) {
+        if (number == 0)
+        {
             Console.WriteLine("Your number is zero");
         }
-        if (number > 0) {
+        if (number > 0)
+        {
             Console.WriteLine("Your number is positive");
         }
     }
 
     public static void FindMinimum(int num1, int num2, int num3)
     {
-        Console.WriteLine("The minimum value is" + Math.Min(num1, Math.Min(num2, num3));
+        Console.WriteLine("The minimum value is " + Math.Min(num1, Math.Min(num2, num3)));
     }
 
     public static void FindMaximum(int num1, int num2, int num3)
     {
-        Console.WriteLine("The maximum value is" + Math.Max(num1, Math.Max(num2, num3));
+        Console.WriteLine("The maximum value is " + Math.Max(num1, Math.Max(num2, num3)));
     }
 
     public static void IsDivisibleBy5(int number)
     {
-        int ans = number % 5
-        if (ans == 0) 
+        int ans = number % 5;
+        if (ans == 0)
         {
             Console.WriteLine(number + " is divisible by 5");
         }
@@ -66,7 +70,7 @@ public class Program
 
     public static void CheckEvenOrOdd(int number)
     {
-        int div = number % 2
+        int div = number % 2;
         if (div == 0)
         {
             Console.WriteLine(number + " is an even number");
@@ -79,14 +83,44 @@ public class Program
 
     public static void CheckVowelOrConsonant(char letter)
     {
-        if (letter == a, e, i, o, u)
+
+        if (letter == 'a')
         {
             Console.WriteLine(letter + " is a vowel");
         }
         else
         {
-            Console.WriteLine(letter + " is a consonant");
+            if (letter == 'e')
+            {
+                Console.WriteLine(letter + " is a vowel");
+            }
+            else
+            {
+                if (letter == 'i')
+                {
+                    Console.WriteLine(letter + " is a vowel");
+                }
+                else
+                {
+                    if (letter == 'o')
+                    {
+                        Console.WriteLine(letter + " is a vowel");
+                    }
+                    else
+                    {
+                        if (letter == 'u')
+                        {
+                            Console.WriteLine(letter + " is a vowel");
+                        }
+                        else
+                        {
+                            Console.WriteLine(letter + " is a consonant");
+                        }
+                    }
+                }
+            }
         }
+
     }
 
     public static void DisplayDayOfWeek(int dayCode)
