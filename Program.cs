@@ -83,44 +83,14 @@ public class Program
 
     public static void CheckVowelOrConsonant(char letter)
     {
-
-        if (letter == 'a')
+        if(letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' || letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U')
         {
-            Console.WriteLine(letter + " is a vowel");
+            Console.WriteLine($"{letter} is a vowel");
         }
         else
         {
-            if (letter == 'e')
-            {
-                Console.WriteLine(letter + " is a vowel");
-            }
-            else
-            {
-                if (letter == 'i')
-                {
-                    Console.WriteLine(letter + " is a vowel");
-                }
-                else
-                {
-                    if (letter == 'o')
-                    {
-                        Console.WriteLine(letter + " is a vowel");
-                    }
-                    else
-                    {
-                        if (letter == 'u')
-                        {
-                            Console.WriteLine(letter + " is a vowel");
-                        }
-                        else
-                        {
-                            Console.WriteLine(letter + " is a consonant");
-                        }
-                    }
-                }
-            }
+            Console.WriteLine($"{letter} is a consonant");
         }
-
     }
 
     public static void DisplayDayOfWeek(int dayCode)
